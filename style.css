@@ -24,6 +24,30 @@
     -webkit-text-fill-color: var(--prim-text-color);
     -webkit-text-stroke: 1px var(--prim-text-outline);
 }
+.load-box{
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+#loading{
+    margin: 2vw;
+    width:150px;
+    height: 150px;
+    border: solid 16px white;
+    border-radius: 50%;
+    border-top: solid 16px blue;
+    animation: rotate 2s  linear infinite;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+
+}
 
 .main{
     margin:2vw;
@@ -100,4 +124,8 @@
     font-weight: 700;
     font-size: 18px;
     color: white;
+}
+
+.show{
+    display:flex;
 }

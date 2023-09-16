@@ -2,29 +2,39 @@ const api = document.getElementById("Api-Key");
 const search = document.getElementById("search");
 const movieCard = document.getElementsByClassName("Movie-list")[0];
 const form = document.getElementById("form");
+const loading = document.getElementById("load");
 
 //api key
 let apikey = api.value;
 
+function load(){
+    loading.classList.contains("show")?loading.classList.remove("show"):loading.classList.add("show");
+}
+
 
 //function to get data from api
 async function getdata(endpoint) {
+    load();
     const data = await fetch(endpoint);
     const movieData = await data.json();
     // console.log(movieData.Response);
+
     if (movieData.Response == "False") {
         alert(movieData.Error);
     } else {
         const movieList = movieData.Search;
         // console.log(movieData);
-        show(movieList);
+        setTimeout(()=>{
+            load();
+            show(movieList);
+        },600);
     }
 
 }
 
 //function to show movie in ui
 function show(movieList) {
-    movieCard.innerHTML = '';
+    
     let num =0;
 
     movieList.forEach((m) => {
