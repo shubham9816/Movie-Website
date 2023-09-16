@@ -4,9 +4,6 @@ const movieCard = document.getElementsByClassName("Movie-list")[0];
 const form = document.getElementById("form");
 const loading = document.getElementById("load");
 
-//api key
-let apikey = api.value;
-
 function load(){
     loading.classList.contains("show")?loading.classList.remove("show"):loading.classList.add("show");
 }
@@ -20,6 +17,7 @@ async function getdata(endpoint) {
     // console.log(movieData.Response);
 
     if (movieData.Response == "False") {
+        load();
         alert(movieData.Error);
     } else {
         const movieList = movieData.Search;
@@ -65,6 +63,7 @@ function show(movieList) {
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     let searchTerm = search.value;
+    const apikey = api.value;
     // console.log(apikey.length)
     if (apikey.length == 0) {
         alert("Please Enter the API Key First");
@@ -78,7 +77,7 @@ form.addEventListener('submit', (e) => {
     }
 })
 
-getdata(`https://www.omdbapi.com/?s=hindi&apikey=${apikey}`);
+getdata(`https://www.omdbapi.com/?s=hindi&apikey=${api.value}`);
 
 
 
