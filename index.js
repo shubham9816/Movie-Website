@@ -35,6 +35,7 @@ async function getdata(endpoint) {
 //function to show movie in ui
 function show(movieList) {
     
+    movieCard.innerHTML="";
     let num =0;
 
     movieList.forEach((m) => {
