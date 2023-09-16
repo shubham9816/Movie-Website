@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;700&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: Montserrat;
+    background-color: var(--prim-text-color);
+}
+:root{
+    --prim-text-color: #242A32;
+    --prim-text-outline: #0296E5;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    margin-top: 2vw;
+}
+
+.header>h1{
+    color: var(--prim-text-color);
+    font-size: 4vw;
+    font-weight: 700;
+    -webkit-text-fill-color: var(--prim-text-color);
+    -webkit-text-stroke: 1px var(--prim-text-outline);
+}
+
+.main{
+    margin:2vw;
+    width: 95vw;
+
+}
+#Api-Key{
+    width:95%;
+    font-size: 16px;
+    font-family: Poppins;
+    font-weight: 400;
+    padding: 8px;
+    outline: none;
+    border: none;
+    background-color: #3A3F47;
+    color: gray;
+}
+#search{
+    margin-top: 1vw;
+    width:95%;
+    font-size: 16px;
+    font-family: Poppins;
+    font-weight: 400;
+    padding: 8px;
+    outline: none;
+    border: none;
+    background-color: #3A3F47;
+    color: gray;
+}
+
+.Movie-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Movie-card{
+    width: 256px;
+    height: 373px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 2vw;
+    overflow: visible;
+
+}
+.Movie-card>img{
+    width: 209px;
+    height: 303px;
+    border-radius: 16px;
+}
+.detail{
+    display: flex;
+    justify-content: start;
+    
+}
+.num{
+    /* width: 20%; */
+    position: relative;
+    background-color: transparent;
+    bottom: 3.8vw;
+    font-size: 7vw;
+    font-weight: 700;
+    -webkit-text-fill-color: var(--prim-text-color);
+    -webkit-text-stroke: 1px var(--prim-text-outline);
+
+}
+
+.Movie-Name{
+    /* width: 80%; */
+    padding: 1vw;
+    font-family:Poppins;
+    font-weight: 700;
+    font-size: 18px;
+    color: white;
+}
